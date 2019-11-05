@@ -159,12 +159,6 @@ private struct CoolCircle: View {
     }
 }
 
-let colors = [Color.blue, Color.red, Color.orange, Color.pink, Color.purple]
-
-private func randomColor() -> Color {
-    return [Color.blue, Color.red, Color.orange, Color.pink, Color.purple].randomElement()!
-}
-
 struct ShapesView_Previews: PreviewProvider {
     static var previews: some View {
         ShapesView()
