@@ -10,14 +10,55 @@ import SwiftUI
 import Pages
 
 struct GalleryView: View {
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("My Art Collection")
+                .font(.system(size: 40, weight: .bold))
+                .padding([.horizontal, .top])
+            ModelPages(paintings, alignment: .top) { i, painting in
+                PaintingView(painting: painting)
+            }
+            Spacer()
+        }
+    }
+
+}
+
+private struct PaintingView: View {
+
+    var painting: Painting
+
     var body: some View {
         VStack {
-            Text("My Art Collection")
-                .font(.largeTitle)
-            ModelPages(["a", "b", "c"]) { i, letter in
-                Text(letter)
+            Image(painting.image)
+                .resizable()
+                .scaledToFit()
+            VStack(alignment: .leading) {
+                Text(painting.title)
+                    .font(.system(size: 30, weight: .bold))
+                Text(painting.author)
+                    .foregroundColor(.secondary)
+                Text(painting.about)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top)
             }
+            Button(action: {}) {
+                HStack {
+                    Spacer()
+                    Text("Buy for $\(painting.price)")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                    Spacer()
+                }
+                .background(Color.blue)
+                .cornerRadius(10)
+            }
+            .padding(.top, 30)
         }
+        .padding(.horizontal)
     }
 }
 
