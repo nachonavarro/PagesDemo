@@ -1,5 +1,5 @@
 # Pages Demo
-A demo for Pages, a paging view for SwiftUI.
+A demo for [Pages](https://github.com/nachonavarro/pages), a paging view for SwiftUI.
 
 ## Onboarding Demo
 
