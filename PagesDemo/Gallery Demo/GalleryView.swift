@@ -16,7 +16,7 @@ struct GalleryView: View {
             Text("My Art Collection")
                 .font(.system(size: 40, weight: .bold))
                 .padding([.horizontal, .top])
-            ModelPages(paintings, alignment: .top) { i, painting in
+            ModelPages(paintings, hasControl: false) { i, painting in
                 PaintingView(painting: painting)
             }
             Spacer()
@@ -57,6 +57,7 @@ private struct PaintingView: View {
                 .cornerRadius(10)
             }
             .padding(.top, 30)
+            Spacer()
         }
         .padding(.horizontal)
     }

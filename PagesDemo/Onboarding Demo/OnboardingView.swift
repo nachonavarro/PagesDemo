@@ -49,8 +49,8 @@ struct WelcomePage: View {
                     .padding(.top, 8)
             }
             .padding(.horizontal)
-            .padding(.bottom, 40)
-        }
+            .padding(.bottom, 50)
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
