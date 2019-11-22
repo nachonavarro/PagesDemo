@@ -11,12 +11,14 @@ import Pages
 
 struct GalleryView: View {
 
+    @State var index: Int = 0
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("My Art Collection")
                 .font(.system(size: 40, weight: .bold))
                 .padding([.horizontal, .top])
-            ModelPages(paintings, hasControl: false) { i, painting in
+            ModelPages(paintings, currentPage: $index, hasControl: false) { i, painting in
                 PaintingView(painting: painting)
             }
             Spacer()

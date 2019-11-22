@@ -12,9 +12,10 @@ import Pages
 struct Book: View {
 
     let pages = bookToPages(charsInPage: 1400)
+    @State var index: Int = 0
 
     var body: some View {
-        ModelPages(self.pages, transitionStyle: .pageCurl) { i, page in
+        ModelPages(self.pages, currentPage: $index, transitionStyle: .pageCurl) { i, page in
             GeometryReader { geometry in
                 VStack {
                     if i == 0 {

@@ -5,8 +5,8 @@
         "package": "Pages",
         "repositoryURL": "https://github.com/nachonavarro/Pages.git",
         "state": {
-          "branch": "master",
-          "revision": "4d84e61619cd43042d2538c6d6e88fa717fbba8a",
+          "branch": "binding-fix",
+          "revision": "8d600a1b2f1a7794a23c8cf34c3124997154f52c",
           "version": null
         }
       }

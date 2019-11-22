@@ -10,8 +10,11 @@ import SwiftUI
 import Pages
 
 struct OnboardingView: View {
+
+    @State var index: Int = 0
+
     var body: some View {
-        Pages(bounce: false) {
+        Pages(currentPage: $index, bounce: false) {
             WelcomePage(background: "avenue",
                         title: "Ready. Set. Apple.",
                         subtitle: "Insert witty remark about your app that will catch potential users.")
