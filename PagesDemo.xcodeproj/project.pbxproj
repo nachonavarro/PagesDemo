@@ -404,7 +404,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nachonavarro/Pages.git";
 			requirement = {
-				branch = "binding-fix";
+				branch = master;
 				kind = branch;
 			};
 		};
